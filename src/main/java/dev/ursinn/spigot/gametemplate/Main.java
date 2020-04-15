@@ -23,7 +23,7 @@
  *
  */
 
-package dev.ursinn.spigot.template;
+package dev.ursinn.spigot.gametemplate;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

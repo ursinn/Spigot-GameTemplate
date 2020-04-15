@@ -1,7 +1,7 @@
-name: Template
+name: GameTemplate
 version: ${project.version}
-main: dev.ursinn.spigot.template.Main
-prefix: Template
+main: dev.ursinn.spigot.gametemplate.Main
+prefix: GameTemplate
 authors: [ursinn]
 description: ${project.description}
 website: ${project.url}

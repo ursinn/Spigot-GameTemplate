@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh 'mvn clean package -Djar.finalName=Template-#${BUILD_NUMBER}'
+				sh 'mvn clean package -Djar.finalName=GameTemplate-#${BUILD_NUMBER}'
 			}
 			post {
 				success {
