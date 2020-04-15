@@ -1,0 +1,7 @@
+name: Template
+version: ${project.version}
+main: dev.ursinn.spigot.template.Main
+prefix: Template
+authors: [ursinn]
+description: ${project.description}
+website: ${project.url}
