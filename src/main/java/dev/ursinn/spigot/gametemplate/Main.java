@@ -78,12 +78,12 @@ public final class Main extends JavaPlugin {
         mapHelper = new GameMapHelper(this);
 
         if (getOptions().isSetup()) {
-            setStatus(GameStatusEnum.NONE);
-            setMap(getMapHelper().getNullMap());
-        } else {
-            setStatus(GameStatusEnum.IN_GAME);
-            setMap(getMapHelper().getRandomMap());
+            setStatus(GameStatusEnum.SETUP);
+            return;
         }
+
+        setStatus(GameStatusEnum.IN_GAME);
+        setMap(getMapHelper().getRandomMap());
 
         statsAPI = new GameStatsAPI(getOptions().getGame(), getOptions().getDatabasePrefix(), getOptions().getDatabase());
         ArrayList<GameStatsEnum> stats = new ArrayList<>();
