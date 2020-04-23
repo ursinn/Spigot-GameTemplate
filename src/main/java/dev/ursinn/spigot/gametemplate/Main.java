@@ -32,6 +32,7 @@ import dev.ursinn.spigot.gamelib.apis.GameServerAPI;
 import dev.ursinn.spigot.gamelib.apis.GameStatsAPI;
 import dev.ursinn.spigot.gamelib.enums.GameStatsEnum;
 import dev.ursinn.spigot.gamelib.enums.GameStatusEnum;
+import dev.ursinn.spigot.gamelib.helpers.GameArenaHelper;
 import dev.ursinn.spigot.gamelib.helpers.GameMapHelper;
 import dev.ursinn.spigot.gamelib.helpers.GamePlayerHelper;
 import dev.ursinn.spigot.gamelib.helpers.GameUpdateCheckHelper;
@@ -64,6 +65,7 @@ public final class Main extends JavaPlugin {
     private GameMap map;
     private GameStatusEnum status;
     private GameMapHelper mapHelper;
+    private GameArenaHelper arenaHelper;
 
     public static Main getInstance() {
         return instance;
@@ -76,6 +78,8 @@ public final class Main extends JavaPlugin {
         options = new Options(this);
 
         mapHelper = new GameMapHelper(this);
+
+        arenaHelper = new GameArenaHelper(this);
 
         if (getOptions().isSetup()) {
             setStatus(GameStatusEnum.SETUP);
@@ -152,6 +156,10 @@ public final class Main extends JavaPlugin {
 
     public GameMapHelper getMapHelper() {
         return mapHelper;
+    }
+
+    public GameArenaHelper getArenaHelper() {
+        return arenaHelper;
     }
 
     private void registerListener() {
